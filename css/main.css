@@ -136,28 +136,30 @@ textarea {
 
 body{
 
-    background-color: gray; 
+    background-color: black; 
     font-size: 20px;
     font-family: "Roboto", sans-serif;
     overflow: hidden;
-    color: black;
-    /*width: 960px;*/
+    color: white;
+    width: 100%;
 
 }
 
+.float-container {
+    overflow:hidden;
+}
 
-.navigation-menu svg.hamburger-button {
+/***************************NAV STYLES*********************************/
+
+.hamburger-button {
     margin-left: 92%;
     margin-top: 10px;
     width:70px;
     height:70px;
     margin-bottom: 15px;
+    stroke:red;
 }
 
-.navigation-menu svg.hamburger-button a:hover{
-    color: blue;
-
-}
 
 .nav-border {
     display: none;
@@ -167,27 +169,22 @@ body{
 
 .toggled-nav ul {
     display: none;
-    margin: 0 auto;
-    width: 50%%;
-    color:#000066;
+    border-bottom: 4px solid blue;
+    border-right:4px solid yellow;
+    border-top: 4px dashed #00FA9A;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.toggled-nav ul li{
-float: left;
-padding-left: 50px;
-font-size: 25px;
-line-height: 30px;
-color:#000066;
+.first-nav-option, .second-nav-option, .third-nav-option {
+font-size: 18px;
+color:#00FF7F;
+/*margin-left: 5px;*/
 
-}
-
-.toggled-nav ul li.first-nav-option {
-margin-top: 0px!important;
-padding-top: 0px!important;
 }
 
 
-h1 {
+h1.header-style {
     font-size: 60px;
     line-height: 1.5em;
     
@@ -199,13 +196,15 @@ a, a:visited {
 }
 
 a:hover {
-    color: #000066;
+    text-decoration: none;
 }
 
 a:active {
-    color: #000066;
+    color: #00FF7F;
     font-weight: bold;
 }
+
+/***************************PATH & PATH STYLES*********************************/
 
 .big {
     display: block;
@@ -215,7 +214,23 @@ a:active {
 
 }
 
+.wrapper {
+    position:relative;
+    left:1010.9226065180615px;
+    top:-702.893202250021px;
 
+}
+.sp-canvas {
+    position:absolute;
+    z-index: 9998;
+    left:-220px;
+    top: -870px;
+    pointer-events:none;
+    -webkit-user-select:none;
+    -webkit-user-drag:none;
+    display: none;
+}
+/*
 .wrapper div {
     position: absolute;
 }
@@ -225,6 +240,7 @@ a:active {
     display: none;
 }
 
+*/
 .arrow {
     position: relative;
     display: inline-block;
@@ -256,6 +272,12 @@ a:active {
 .scrollbar {
     top: 1350px;
     left: 1600px;
+    width: 440px;
+}
+
+.scrollbar-next{
+    top: 2000px;
+    left: 2400px;
     width: 440px;
 }
 
@@ -328,105 +350,101 @@ img.firehydrant {
 
 
 /* ==========================================================================
-   Helper classes
+   CONTACT FORM STYLES
    ========================================================================== */
 
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
+body.contact-form-body {
+    background-color: black;
+    padding: 0 15px;
+    width: 100%;
 }
 
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
+.content-wrapper.container {
+     padding: 0 15px;
 }
 
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
+/*HELP!!!!!!!!!!!!!!!! I WANT THIS TO TAKE THE FULL VIEWPORT*/
+ 
+.hello-header {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
 }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+.form-header-border {
+    border-top: 2px solid white;
+    margin-bottom: 15px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+.linkedin-icon {
+    width: 30px;
+    height:30px;
 }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
 
-.invisible {
-    visibility: hidden;
+.first-name-input {
+    margin-top: 30px;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+.first-name-input,
+.last-name-input,
+.email-input {
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    margin-bottom: 10px;
+    padding-right: 300px;
+    padding-bottom:7px;
+    padding-top: 7px;
+    border: 1px solid white;
+    background-color: black;
+    font-size: 14px;
 }
 
-.clearfix:after {
-    clear: both;
+.last-name-input,
+.email-input {
+    margin-top: 10px;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
 
-.clearfix {
-    *zoom: 1;
+.textarea-box { 
+    resize:vertical; max-height:600px; min-height:200px;
+    outline: none; 
+    border: 1px solid white;
+    background-color: black;
+    margin-top: 10px;
+    color:white;
+    font-size: 14px;
+    width:300px;
+
 }
+
+.textarea-box { 
+    resize:horizontal; max-width:600px; min-width:200px; 
+}
+
+input.submit-button{
+
+  background:none;
+  border:1px solid white;
+  padding-left:12px;
+  padding-right:12px;
+  font-size:18px;
+  color:white;
+  margin: 30px;
+  padding-top:12px;
+  padding-bottom: 12px;
+
+}
+
+input.submit-button:hover {
+    background-color: blue;
+    color:yellow;
+    font-weight:bold;
+}
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -445,74 +463,5 @@ img.firehydrant {
     /* Style adjustments for high resolution devices */
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
 
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}

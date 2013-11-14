@@ -1,11 +1,12 @@
-
-// Hamburger Toggle to Nav
-
-$( ".hamburger-toggle svg" ).click(function() {
-  $( ".nav-border, .toggled-nav ul" ).toggle( "slow", function() {
-    // Animation complete.
-  });
+/ Defining the Scroll Path
+var path = $.fn.scrollPath("getPath", {
+    scrollSpeed: 80, // Default is 50
+    rotationSpeed: Math.PI / 10 // Default is Math.PI / 15
 });
+// Use the various path drawing methods below on the path variable
+
+
+
 
 $(document).ready(init);
 
@@ -25,6 +26,7 @@ function init() {
 			},
 			name: "syntax"
 		})
+
 		// Continue line to 'scrollbar'
 		.lineTo(1750, 1600, {
 			callback: function() {
@@ -33,15 +35,14 @@ function init() {
 			name: "scrollbar"
 		})
 
-		//Continue line to 'more_story'
-		.lineTo(600,1600, {
-			callback: function () {
+			// Continue line to 'scrollbar'
+		.lineTo(1750, 1600, {
+			callback: function() {
 				highlight($(".sp-scroll-handle"));
 			},
-			name:"more_story"
+			name: "scrollbar"
 		})
-
-
+		
 		// Arc up while rotating
 		.arc(1800, 1000, 600, Math.PI/2, 0, true, {rotate: Math.PI/2 })
 		// Line to 'rotations'
@@ -82,14 +83,15 @@ function init() {
 	});
 
 	/* ===================================================================== */
-
-	$(".settings .show-path").click(function(e) {
+        var toggled = false;
+	$(".setting .show-path").on("click", function(e) {
 		e.preventDefault();
 		$(".sp-canvas").toggle();
-	}).toggle(function() {
-		$(this).text("Hide Path");
-	}, function() {
-		$(this).text("Show Path");
+toggled = !toggled;
+                
+if(toggled) { $(this).text("Hide Path"); } else { $(this).text("Show Path"); }
+               
+               
 	});
 
 	$(".tweet").click(function(e) {
@@ -120,3 +122,29 @@ function ordinal(num) {
 	);
 }
 
+
+
+
+// <!DOCTYPE HTML>
+// <html>
+//   <head>
+//     <style>
+//       body {
+//         margin: 0px;
+//         padding: 0px;
+//       }
+//     </style>
+//   </head>
+//   <body>
+//     <canvas id="myCanvas" width="578" height="200"></canvas>
+//     <script>
+//       var canvas = document.getElementById('myCanvas');
+//       var context = canvas.getContext('2d');
+
+//       context.beginPath();
+//       context.moveTo(100, 150);
+//       context.lineTo(450, 50);
+//       context.stroke();
+//     </script>
+//   </body>
+// </html>

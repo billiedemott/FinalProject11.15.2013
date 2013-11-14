@@ -126,7 +126,20 @@ nav a:hover {
 	background: rgba(15,15,15, 0.5);
 }
 
-.sp-canvas {
+.snippets-wrapper {
+	position:relative;
+	left:1010.9226065180615px;
+	top:-702.893202250021px;
+
+}
+.path-canvas {
+	position:absolute;
+	z-index: 9998;
+	left:-220px;
+	top: -870px;
+	pointer-events:none;
+	-webkit-user-select:none;
+	-webkit-user-drag:none;
 	display: none;
 }
 
