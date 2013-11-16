@@ -1,5 +1,6 @@
 
-// Hamburger Toggle to Nav
+
+/* ========== HAMBURGER TOGGLE TO NAV ============= */
 
 $( ".hamburger-toggle svg" ).click(function() {
   $( ".nav-border, .toggled-nav ul" ).toggle( "slow", function() {
@@ -7,10 +8,13 @@ $( ".hamburger-toggle svg" ).click(function() {
   });
 });
 
+console.log($('.hamburger-toggle'));
+
+/* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
+
 $(document).ready(init);
 
 function init() {
-	/* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
 	$.fn.scrollPath("getPath")
 		// Move to 'start' element
@@ -34,12 +38,15 @@ function init() {
 		})
 
 		//Continue line to 'more_story'
-		.lineTo(600,1600, {
-			callback: function () {
-				highlight($(".sp-scroll-handle"));
-			},
-			name:"more_story"
-		})
+		//.
+
+		//lineTo(600,1600, {
+			// callback: function () {
+				// highlight($(".sp-scroll-handle"));
+			//},
+			// name:"more_story"
+		//})
+
 
 
 		// Arc up while rotating
@@ -69,6 +76,11 @@ function init() {
 	// We're done with the path, let's initate the plugin on our wrapper element
 	$(".wrapper").scrollPath({drawPath: true, wrapAround: true});
 
+
+//DELETE
+/* ===================================================================== */
+
+
 	// Add scrollTo on click on the navigation anchors
 	$("nav").find("a").each(function() {
 		var target = $(this).attr("href").replace("#", "");
@@ -81,7 +93,9 @@ function init() {
 		});
 	});
 
+//DELETE
 	/* ===================================================================== */
+
 
 	$(".settings .show-path").click(function(e) {
 		e.preventDefault();
@@ -105,6 +119,8 @@ function init() {
 			});
 	}
 
+//DELETE
+/* ===================================================================== */
 
 function highlight(element) {
 	if(!element.hasClass("highlight")) {
@@ -119,4 +135,29 @@ function ordinal(num) {
 		(num % 10 == 3 && num % 100 != 13) ? 'rd' : 'th'
 	);
 }
+
+
+/* ========== DEFINING THE FORM VALIDATION ============= */
+
+$('form').submit (
+	function() {
+		console.log('clicked');
+		var name = $('first-name-input').val();
+
+		var isChecked = $('input: checked').length;
+
+		var isValid = 1; 
+
+		if (name != "" && email != "") alert ('validated')
+
+		if (name == " ") isValid = 0; 
+	    else if (email == "") isValid =0; 
+
+
+		var email = $('last-name-input').val();
+		console.log($('email-input').val());
+		return false; 
+		// way to prevent the default behavior from happening; 
+		// delays submission
+	})
 
