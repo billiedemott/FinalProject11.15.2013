@@ -121,6 +121,13 @@ h1.index-header-style {
     
 }
 
+.starry-awesomeness {
+    position: relative;
+    z-index: -9999;
+}
+
+
+
 /***************************PATH & PATH STYLES*********************************/
 
 .big {

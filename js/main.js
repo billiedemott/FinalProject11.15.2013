@@ -10,6 +10,10 @@ $( ".hamburger-toggle svg" ).click(function() {
 
 console.log($('.hamburger-toggle'));
 
+/* ========== STARRY JAZZINESS and GOOD THINGS ==============*/
+
+$('.starry-awesomeness').starscroll(16,3,50,5,5,[255,255,255],true,true);
+
 /* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
 $(document).ready(init);
