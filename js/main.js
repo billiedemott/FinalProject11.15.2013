@@ -1,6 +1,4 @@
-
-
-/* ========== HAMBURGER TOGGLE TO NAV ============= */
+ // ========== HAMBURGER TOGGLE TO NAV ============= 
 
 $( ".hamburger-toggle svg" ).click(function() {
   $( ".nav-border, .toggled-nav ul" ).toggle( "slow", function() {
@@ -8,38 +6,77 @@ $( ".hamburger-toggle svg" ).click(function() {
   });
 });
 
-console.log($('.hamburger-toggle'));
-
 /* ========== STARRY JAZZINESS and GOOD THINGS ==============*/
 
-$('.starry-awesomeness').starscroll(16,3,50,5,5,[255,255,255],true,true);
+//$('.starry-awesomeness').starscroll(16,3,50,5,5,[255,255,255],true,true);
 
 /* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
-$(document).ready(init);
-
-function init() {
-
-	$.fn.scrollPath("getPath")
+//$(document).ready(init);
+// init();
+// function init() {
+	// $.fn.scrollPath("getPath")
 		// Move to 'start' element
-		.moveTo(400, 50, {name: "start"})
+		// .moveTo(400, 50, {name: "start"})
 		// Line to 'description' element
-		.lineTo(400, 800, {name: "description"})
+		// .lineTo(400, 800, {name: "description"})
+		// .arc(200, 1200, 400, -Math.PI/2, Math.PI/2, true)
+		// .lineTo(600, 1600)
+		// .lineTo(2300,1600)
+		// .lineTo(2550, 1600, {
+			// callback: function() {
+				// highlight($(".sp-scroll-handle"));
+			// },
+			// name: "scrollbar"
+		// })
+		// Arc up while rotating
+		// .arc(1800, 1000, 600, Math.PI/2, 0, true, {rotate: Math.PI/2 })
+		// Line to 'rotations'
+		// .lineTo(2400, 750, {
+			// name: "rotations"
+		// })
+		// Rotate in place
+		// .rotate(3*Math.PI/2, {
+			// name: "rotations-rotated"
+		// })
+
+		// .lineTo(1300,400)
+	
+		// Continue upwards to 'source'
+		// .lineTo(2400, -700, {
+			// name: "source"
+		// });
+
+		// Small arc downwards
+		// .arc(2250, -700, 150, 0, -Math.PI/2, true)
+
+		//Line to 'follow'
+		// .lineTo(1350, -850, {
+			// name: "follow"
+		// })
+		// Arc and rotate back to the beginning.
+		// .arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
+
+		// .lineTo(2300, 2000)
+		// .arc( 400, 500, 400, Math.PI/2, -Math.PI/2)
+		// Line to 'syntax' element
+	
+		
 		// Arc down and line to 'syntax'
-		.arc(200, 1200, 400, -Math.PI/2, Math.PI/2, true)
-		.lineTo(600, 1600, {
-			callback: function() {
-				highlight($(".settings"));
-			},
-			name: "syntax"
-		})
-		// Continue line to 'scrollbar'
-		.lineTo(1750, 1600, {
-			callback: function() {
-				highlight($(".sp-scroll-handle"));
-			},
-			name: "scrollbar"
-		})
+		// .arc(200, 1200, 400, -Math.PI/2, Math.PI/2, true)
+		// .lineTo(600, 1600, {
+		// 	callback: function() {
+		// 		highlight($(".settings"));
+		// 	},
+		// 	name: "syntax"
+		// })
+		// // Continue line to 'scrollbar'
+		// .lineTo(1750, 1600, {
+		// 	callback: function() {
+		// 		highlight($(".sp-scroll-handle"));
+		// 	},
+		// 	name: "scrollbar"
+		// })
 
 		//Continue line to 'more_story'
 		//.
@@ -54,31 +91,31 @@ function init() {
 
 
 		// Arc up while rotating
-		.arc(1800, 1000, 600, Math.PI/2, 0, true, {rotate: Math.PI/2 })
-		// Line to 'rotations'
-		.lineTo(2400, 750, {
-			name: "rotations"
-		})
-		// Rotate in place
-		.rotate(3*Math.PI/2, {
-			name: "rotations-rotated"
-		})
+		// .arc(1800, 1000, 600, Math.PI/2, 0, true, {rotate: Math.PI/2 })
+		// // Line to 'rotations'
+		// .lineTo(2400, 750, {
+		// 	name: "rotations"
+		// })
+		// // Rotate in place
+		// .rotate(3*Math.PI/2, {
+		// 	name: "rotations-rotated"
+		// })
 		// Continue upwards to 'source'
-		.lineTo(2400, -700, {
-			name: "source"
-		})
+		// .lineTo(2400, -700, {
+		// 	name: "source"
+		// })
 		// Small arc downwards
-		.arc(2250, -700, 150, 0, -Math.PI/2, true)
+		// .arc(2250, -700, 150, 0, -Math.PI/2, true)
 
 		//Line to 'follow'
-		.lineTo(1350, -850, {
-			name: "follow"
-		})
+		// .lineTo(1350, -850, {
+		// 	name: "follow"
+		// })
 		// Arc and rotate back to the beginning.
-		.arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
+		//.arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
 
 	// We're done with the path, let's initate the plugin on our wrapper element
-	$(".wrapper").scrollPath({drawPath: true, wrapAround: true});
+	$("#my-wrapper").scrollPath({drawPath: true, wrapAround: true});
 
 
 //DELETE
@@ -121,7 +158,7 @@ function init() {
 					$(".follow .count").html("the " + ordinal(data.count + 1) + " kind person to");
 				}
 			});
-	}
+	// }
 
 //DELETE
 /* ===================================================================== */
@@ -163,5 +200,5 @@ $('form').submit (
 		return false; 
 		// way to prevent the default behavior from happening; 
 		// delays submission
-	})
+	});
 

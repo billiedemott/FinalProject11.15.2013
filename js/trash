@@ -1,0 +1,50 @@
+<div class="wrapper" id="my-wrapper">
+            <!-- CANVAS -->
+            <canvas class="sp-canvas">
+
+            <div class="demo">
+                <h1 class="index-header-style">Billie DeMott</h1>
+                <span class="arrow">&darr;</span> 
+                Take a Scroll through my life. <span class="arrow">&darr;</span>
+            </div>
+            
+            <div class="description">
+                <span class="big">My life path has felt a little like the movement of this copy/text snippets: seemingly all over the place, but decoded*, has a discernable path.</span>
+            </div>
+
+            <div class="syntax">
+                <span class="big">I graduated Amherst College with <a href="http://www.scribd.com/doc/106473788/Thesis-2007-Demott-B-1">a piece of writing</a> only an author (or thesis advisor) would love and the desire to copywrite ads in the City. My way into the ad world was as a Broadcast Production P.A. at <a href="http://www.jwt.com">JWT</a>.</span>
+            </div>
+
+            <div class="scrollbar">
+                <span class="big"> After a yr of PA-ing/project-managing, the creative world sapped me of my creativity.I decided I should head down the liberal art student's default path: law school. To make this transition, I started working at a hedge fund.</span>
+            </div>
+
+            <div class="rotations">
+
+                <img class="firehydrant" src="img/firehydrant.jpg">
+                <span>I've learned A LOT in finance. I've asked any question I could get willingly answered. I've gained an understanding of business, management structure and the economy that I previously did not hold.  ...</span>
+                <span>BUT</span>         
+                <span class="upside-down big"><a href="http://caniuse.com/#feat=transforms2d"></a> </span>
+            </div>
+
+            <div class="more_story">
+                <span class="big"> while this world has not stemmed my curiousity, it has suffocated my creativity. I've always known I was a misfit in this world because my creative bones could not be bridled forever...</span>
+            </div>
+
+            <div class="more_story">
+                <span class="big"> Sodoubthis world has not stemmed my curiousity, it has suffocated my creativity. I've always known I was a misfit in this world because my creative bones could not be bridled forever...</span>
+            </div>
+
+
+            <div class="source">
+                <span class="big">I have no money-making company to boast about, but on this site I show what I've learned and created in my pursuit.</span>
+            </div>
+
+            <div class="follow">
+                <span class="big">Feel free to <a href="https://twitter.com/JoelBesada">follow me</a> on Twitter. You can also be <span class="count">a kind person and</span> 
+            </div>
+
+            </canvas>
+
+        </div>
