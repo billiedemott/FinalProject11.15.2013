@@ -20,58 +20,74 @@ function init() {
 
 	$.fn.scrollPath("getPath")
 		// Move to 'name-intro' element
-		.moveTo(400, 50, {name: ""})
-		.lineTo(400, 800, {name: "description"})
+		.moveTo(400, 50, {name: "name-intro"})
+
 		//Line to 'copy-movement-analogy' element
 		.lineTo(400, 800, {name: "description"})
 		.arc(200, 1200, 400, -Math.PI/2, Math.PI/2, true)
-		
+
+		// Line to 'thesis-amherst'
 		.lineTo(600, 1600)
 		.lineTo(2300,1600)
+
+		// Line to 'transition-hedge-fund'
 		.lineTo(2550, 1600)
 		// Arc up while rotating
 		.arc(1800, 1000, 600, Math.PI/2, 0, true, {rotate: Math.PI/2 })
-		//Line to 'copy-movement-analogy' element
-		.lineTo(2400, 750)
 		// Rotate in place
 		// .rotate(3*Math.PI/2, {
 			// name: "rotations-rotated"
 		// })
 
+        //Line to 'lawschool-finance' element
+		.lineTo(2400, 750)
 		.lineTo(1300,400)
 	
-		// Continue upwards to 'source'
+		// Line to 'waning-excitement' element
 		.lineTo(2400, -700) 
-			// name: "source"
 
 		// Small arc downwards
 		.arc(2250, -700, 600, 0, -Math.PI/2, true)
 
-		//Line to 'follow'
+		//Line to 'side-project-lesson' element
 		.lineTo(1350, -850)
-			// name: "follow"
-		// })
-		// Arc and rotate back to the beginning.
-		// .arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
 
+		//Line to 'tap-farm-description' element
 		.lineTo(1350, -2000)
 		// .arc( 400, 500, 400, Math.PI/2, -Math.PI/2)
 		// Line to 'syntax' element
-	
-		
 		// Arc down and line to 'syntax'
 		// .arc(200, 1200, 400, -Math.PI/2, Math.PI/2, true)
 		.lineTo(300, -1600)
 		.lineTo(300, -2200)
 		.lineTo(900, -2600)
 		.lineTo (1200,-2900)
-		.moveTo(-800, 50, {name: "start"})
-		.lineTo(-800, 800, {name: "description"})
-		.lineTo(-1200,1000)
-		.moveTo(-1250,700)
-		.lineTo (-1000,2900)
+		.lineTo (1600,-3100)
+
+		// Move to 'fast-forward-text' element
+		.moveTo(400, 50)
+		.lineTo(-800, 1100)
+		// ****************I WANT A ROTATE & ARC HERE*******************
+
+		// Line to 'spoutlets-description'
+		.lineTo(-1200,1900)
+		.lineTo(-1700,900)
+		.lineTo(-1200,1900)
+		.lineTo(-1700,900)
+		.lineTo(-2100,300)
+		.lineTo(-2100,-600)
+		.lineTo(-2100,-900)
+
+
+		// .arc(-1700, 900, 300, -Math.PI/2, Math.PI/2, true)
+	
+
+
+
+		// .moveTo(-1250,700)
+		// .lineTo (-1000,2900)
 		// .arc(-1300, 2700, 600, 0, -Math.PI/2, true
-		.lineTo (-300,1700)
+		// .lineTo (-300,1700)
 		// want arc here
 
 		// Arc and rotate back to the beginning.

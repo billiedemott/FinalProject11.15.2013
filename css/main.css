@@ -182,7 +182,7 @@ h1.index-header-style {
 
 .name-intro .arrow {
     font-size: 40px;
-    animation: point-down 0.5s alternate infinite;
+   -webkit-animation:: point-down 0.5s alternate infinite;
 }
 
 .copy-movement-analogy {
@@ -203,70 +203,94 @@ h1.index-header-style {
     width: 440px;
 }
 
+/*where is this squirrel div?*/
+
 .squirrel {
-    top: 2200px;
-    left: 2400px;
+    top: 2000px;
+    left: 1000px;
     width: 200px;
     height:200px;
-    transform: rotate(-90deg) translateY(2.5em);
+    transform: rotate(-90deg) translateY(2.5em);*/
 }
-
-.lawschool-finance {
-    left: 2185px;
-    top: 660px;
-    width: 460px;
-}
-
 
 .squirrel .upside-down {
     font-size: 25px;
-    text-align: right;
-    transform: rotate(180deg) translateY(3em);
+    /*text-align: right;*/
+    transform: rotate(180deg) translateY(3em);*/
+}
+
+.lawschool-finance {
+    left: 2000px;
+    top: 1000px;
+    width: 460px;
+    -webkit-transform: rotate(-90deg);
 }
 
 .waning-excitement {
     left: 2200px;
     top: -800px;
     width: 400px;
-    transform: rotate(90deg) translateX(50px);
+     -webkit-transform: rotate(-90deg);
 }
 
 .side-project-lesson {
     width: 475px;
     left: 1100px;
     top: -950px;
-    transform: rotate(90deg) translateX(50px);
+    -webkit-transform: rotate(-90deg);
+
 }
+
+/*
+div.side-project-lesson:hover 
+{ transition: width;
+transition-duration: 1s;
+transition-timing-function: linear;
+transition-delay: 2s;;
+    
+}
+*/
 
 .tap-farm-description {
     width: 475px;
-    left: -970px;
-    top: -1000px;
+    left: 400px;
+    top: -2100px;
+     -webkit-transform: rotate(-90deg);
 
 }
 
 .fast-forward-text {
     width: 475px;
-    left: -1070px;
-    top: -2000px;
-
+    left: -1200px;
+    top: 600px;
+     -webkit-transform: rotate(-90deg);
 }
 
 .spoutlets-description {
     width: 475px;
-    left: -1070px;
-    top: -2500px;
+    left: -2000px;
+    top: 700px;
+    -webkit-transform: rotate(-90deg);
 
 }
 
 .ws-description {
+    width: 475px;
+    left: -2500px;
+    top: -900px;
+      -webkit-transform: rotate(-90deg);
+
+
+}
+
+.conclusion {
     width: 475px;
     left: -2000px;
     top: -2000px;
 
 }
 
-.ws-description {
+.epilogue {
     width: 475px;
     left: -1000px;
     top: -2000px;
@@ -298,7 +322,7 @@ h1.index-header-style {
 
 /* ==========================================================================
    CONTACT FORM STYLES
-   ========================================================================== */
+   ========================================================================== 
 
 body.contact-form-body {
     background-color: black;
