@@ -174,30 +174,30 @@ h1.index-header-style {
     display: inline-block;
 }
 
-.demo { 
+.name-intro { 
     width: 800px;
     font-size: 25px;
     text-align: center;
 }
 
-.demo .arrow {
+.name-intro .arrow {
     font-size: 40px;
     animation: point-down 0.5s alternate infinite;
 }
 
-.description {
+.copy-movement-analogy {
     top: 740px;
     left: 180px;
     width: 440px;
 }
 
-.syntax {
+.thesis-amherst {
     top: 1510px;
     left: 430px;
     width: 470px;
 }
 
-.scrollbar {
+.transition-hedge-fund {
     top: 1350px;
     left: 1600px;
     width: 440px;
@@ -206,56 +206,74 @@ h1.index-header-style {
 .squirrel {
     top: 2200px;
     left: 2400px;
-    width: 440px;
-}
-
-/* TAQQQQUI***********************************
-.first-rotation {
-    left: 2185px;
-    top: 660px;
-    width: 460px;
-    transform: rotate(180deg) translateY(2.5em);
-}
-
-*/**********************************************
-
-
-.rotations {
-    left: 2185px;
-    top: 660px;
-    width: 460px;
+    width: 200px;
+    height:200px;
     transform: rotate(-90deg) translateY(2.5em);
 }
 
-img.firehydrant {
-    width:400px;
-    height:600px;
-    border:3px solid black;
+.lawschool-finance {
+    left: 2185px;
+    top: 660px;
+    width: 460px;
 }
 
-.rotations .upside-down {
+
+.squirrel .upside-down {
     font-size: 25px;
     text-align: right;
     transform: rotate(180deg) translateY(3em);
 }
 
-.source {
+.waning-excitement {
     left: 2200px;
     top: -800px;
     width: 400px;
     transform: rotate(90deg) translateX(50px);
 }
 
-.follow {
+.side-project-lesson {
     width: 475px;
     left: 1100px;
     top: -950px;
     transform: rotate(90deg) translateX(50px);
 }
 
-.follow .big {
-    font-size: 25px;
+.tap-farm-description {
+    width: 475px;
+    left: -970px;
+    top: -1000px;
+
 }
+
+.fast-forward-text {
+    width: 475px;
+    left: -1070px;
+    top: -2000px;
+
+}
+
+.spoutlets-description {
+    width: 475px;
+    left: -1070px;
+    top: -2500px;
+
+}
+
+.ws-description {
+    width: 475px;
+    left: -2000px;
+    top: -2000px;
+
+}
+
+.ws-description {
+    width: 475px;
+    left: -1000px;
+    top: -2000px;
+
+}
+
+
 
 .highlight {
     animation: highlight 0.2s alternate 6 ;
