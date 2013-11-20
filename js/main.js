@@ -8,7 +8,7 @@ $( ".hamburger-toggle svg" ).click(function() {
 
 /* ========== STARRY JAZZINESS and GOOD THINGS ==============*/
 
-// $('.starry-awesomeness').starscroll(16,3,50,5,5,[255,255,255],true,true);
+$('.starry-awesomeness').starscroll(16,3,50,5,5,[255,255,255],true,true);
 
 /* ========== DRAWING THE PATH AND INITIATING THE PLUGIN ============= */
 
@@ -72,15 +72,20 @@ function init() {
 		// Line to 'spoutlets-description'
 		.lineTo(-1200,1900)
 		.lineTo(-1700,900)
-		.lineTo(-1200,1900)
-		.lineTo(-1700,900)
 		.lineTo(-2100,300)
 		.lineTo(-2100,-600)
 		.lineTo(-2100,-900)
 
-
 		// .arc(-1700, 900, 300, -Math.PI/2, Math.PI/2, true)
-	
+
+		// Line to 'ws-description'
+		.lineTo(-2300, -1900)
+		// Line to 'conclusion'
+		.lineTo(-2300, -2200)
+		// Line to 'epilogue'
+		.lineTo(-2300,-2500)
+		// Arc and rotate back to the beginning.
+		.arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
 
 
 
@@ -126,7 +131,7 @@ function init() {
 		//.arc(1300, 50, 900, -Math.PI/2, -Math.PI, true, {rotate: Math.PI*2, name: "end"});
 
 	 // ========== CALLING THE SCROLLPATH PLUGIN==============*//
-	$(".wrapper").scrollPath({drawPath: true, wrapAround: false});
+	$(".wrapper").scrollPath({drawPath: true, wrapAround: true});
 
 //	$(".wrapper").scrollPath({drawPath: true, wrapAround: false});
 }
@@ -168,7 +173,7 @@ function init() {
 	$.getJSON("http://cdn.api.twitter.com/1/urls/count.json?callback=?&url=http%3A%2F%2Fjoelb.me%2Fscrollpath",
 			function(data) {
 				if(data && data.count !== undefined) {
-					$(".follow .count").html("the " + ordinal(data.count + 1) + " kind person to");
+					// $(".follow .count").html("the " + ordinal(data.count + 1) + " kind person to");
 				}
 			});
 	// }
@@ -214,3 +219,40 @@ $('form').submit (
 		// delays submission
 	});
 */
+
+function validateForm() {
+	var formBody = $('.contact-form-body');
+
+	if ( formBody.length == 0 ) return;
+
+	$('.form-horizontal').submit( function() {
+		var name = $( this ).find('.first-name-input').val();
+		var lastname = $( this ).find('.last-name-input').val();
+		var email = $( this ).find( '.email-input' ).val();
+
+		var numerrors = 0;
+		if ( name == "" ) {
+			// error condition
+			alert('no name!');
+			numerrors++;
+		}
+		if ( lastname == "" ) {
+			alert('no last name')
+			numerrors++;
+		} 
+		if ( email == "" ) {
+			alert('no email!');
+			numerrors++;
+		}
+
+		if ( numerrors == 0 ) {
+			// SEND AJAX request
+			alert('valid!')
+		}
+
+
+		return false;
+	});
+}
+
+validateForm();

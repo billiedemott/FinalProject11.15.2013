@@ -48,7 +48,7 @@ table {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   INDEX Author's custom styles
    ========================================================================== */
 
 body{
@@ -185,6 +185,17 @@ h1.index-header-style {
    -webkit-animation:: point-down 0.5s alternate infinite;
 }
 
+
+/*.parallelogram {
+    width: 150px;
+    height: 100px;
+    -webkit-transform: skew(20deg);
+       -moz-transform: skew(20deg);
+         -o-transform: skew(20deg);
+    background: red;
+}
+
+*/
 .copy-movement-analogy {
     top: 740px;
     left: 180px;
@@ -280,24 +291,25 @@ transition-delay: 2s;;
     top: -900px;
       -webkit-transform: rotate(-90deg);
 
-
 }
 
 .conclusion {
     width: 475px;
-    left: -2000px;
-    top: -2000px;
+    left: -2700px;
+    top: -2200px;
+     -webkit-transform: rotate(-90deg);
 
 }
 
 .epilogue {
     width: 475px;
-    left: -1000px;
-    top: -2000px;
+    left: -1700px;
+    top: -2300px;
+     -webkit-transform: rotate(-90deg);
 
 }
 
-
+/*
 
 .highlight {
     animation: highlight 0.2s alternate 6 ;
@@ -317,12 +329,12 @@ transition-delay: 2s;;
         background: lightblue;
     }
 }
+*/
 
 
-
-/* ==========================================================================
-   CONTACT FORM STYLES
-   ========================================================================== 
+ /*==========================================================================*/
+   /*CONTACT FORM STYLES*/
+/*========================================================================== */
 
 body.contact-form-body {
     background-color: black;
@@ -334,8 +346,6 @@ body.contact-form-body {
      padding: 0 15px;
 }
 
-/*HELP!!!!!!!!!!!!!!!! I WANT THIS TO TAKE THE FULL VIEWPORT*/
- 
 .hello-header {
     color: #33FF99;
     text-align: center;
@@ -420,8 +430,13 @@ input.submit-button:hover {
 
 
 /* ==========================================================================
-   CONTACT FORM STYLES
+UX DESIGN STYLES
    ========================================================================== */
+   .main-content-wrapper.my-work-page {
+        width: 100%;
+
+   }
+
    .first-company {
     background-color: #00FA9A;
    }
@@ -429,6 +444,11 @@ input.submit-button:hover {
    .second-company {
     background-color: #3366FF;
    }
+
+   .writing {
+    background-color: yellow;
+   }
+
 
 
 /* ==========================================================================
