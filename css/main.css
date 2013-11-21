@@ -132,11 +132,12 @@ h1.index-header-style {
 
 .big {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.3em;
     margin-bottom: 10px;
 
 }
+
 
 .wrapper {
     position:absolute;
@@ -177,7 +178,11 @@ h1.index-header-style {
 .name-intro { 
     width: 800px;
     font-size: 25px;
+    color: white;
     text-align: center;
+    -webkit-transform: skew(20deg);
+       -moz-transform: skew(20deg);
+         -o-transform: skew(20deg);
 }
 
 .name-intro .arrow {
@@ -186,16 +191,12 @@ h1.index-header-style {
 }
 
 
-/*.parallelogram {
-    width: 150px;
-    height: 100px;
-    -webkit-transform: skew(20deg);
-       -moz-transform: skew(20deg);
-         -o-transform: skew(20deg);
-    background: red;
+.parallelogram {
+    width: 500px;
+    *height: 100px;
+    
 }
 
-*/
 .copy-movement-analogy {
     top: 740px;
     left: 180px;
@@ -211,30 +212,41 @@ h1.index-header-style {
 .transition-hedge-fund {
     top: 1350px;
     left: 1600px;
-    width: 440px;
+    width: 640px;
+    padding-right: 35px;
+    background-color: red;
 }
 
-/*where is this squirrel div?*/
+/*
 
 .squirrel {
     top: 2000px;
     left: 1000px;
     width: 200px;
     height:200px;
-    transform: rotate(-90deg) translateY(2.5em);*/
+    transform: rotate(-90deg) translateY(2.5em);
 }
 
 .squirrel .upside-down {
     font-size: 25px;
-    /*text-align: right;*/
-    transform: rotate(180deg) translateY(3em);*/
+    text-align: right;
+    transform: rotate(180deg) translateY(3em);
 }
+*/
 
 .lawschool-finance {
     left: 2000px;
     top: 1000px;
     width: 460px;
     -webkit-transform: rotate(-90deg);
+    background-color: blue;
+    *padding-right: 270px;
+}
+
+/*POTENTIAL STYLING FOR DIVS*/
+
+.lawschool-finance-text{
+    margin-left: 270px;
 }
 
 .waning-excitement {
